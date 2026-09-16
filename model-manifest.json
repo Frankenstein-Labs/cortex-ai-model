@@ -1,10 +1,18 @@
 {
   "model_id": "deepseek-ai/DeepSeek-V4-Pro",
+  "artifact_kind": "original",
   "revision": "main",
-  "license": "MIT (model card; verify upstream terms at download time)",
+  "commit_sha": null,
+  "license": "MIT (as declared by the official Hugging Face model card; verify current upstream terms)",
   "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+  "architecture": "Mixture-of-Experts with hybrid CSA/HCA attention",
+  "parameter_count": 1600000000000,
+  "active_parameter_count": 49000000000,
+  "context_length": 1000000,
+  "dtype": "FP4 + FP8 mixed",
+  "quantization": "upstream mixed precision artifact",
   "total_size_bytes": 0,
-  "shards": [
-    {"name": ".weights-placeholder", "size_bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "uri": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"}
-  ]
+  "shards": [],
+  "status": "external-metadata-only",
+  "notes": "Shard metadata and immutable commit must be populated from an approved upstream snapshot before download. No weights are included in this repository."
 }

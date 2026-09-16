@@ -4,7 +4,7 @@ CORTEX AI is a model-agnostic foundation for a programming and reasoning system.
 
 ## Current status
 
-The official model card identifies DeepSeek-V4-Pro as a 1.6T-parameter MoE model with 49B activated parameters and a 1M-token context. The model card is marked MIT and points to Hugging Face and ModelScope artifacts. The weights are intentionally not committed, downloaded, or placed in Docker images. This CPU CI foundation tests infrastructure with a zero-byte manifest fixture; it does **not** claim to load or serve the full model.
+The official model card identifies DeepSeek-V4-Pro as a 1.6T-parameter MoE model with 49B activated parameters and a 1M-token context. The model card is marked MIT and points to Hugging Face and ModelScope artifacts. The weights are intentionally not committed, downloaded, or placed in Docker images. The repository manifest is metadata-only until an approved immutable upstream revision and complete shard inventory are recorded; CI does **not** claim to load or serve the full model.
 
 ## Quick start
 
@@ -17,7 +17,7 @@ cortex-ai system-info
 pytest
 ```
 
-For a GPU deployment, obtain the exact approved model revision from the official source, populate a real manifest with verified shard sizes and SHA-256 values, download into a mounted cache, verify it, then configure vLLM or SGLang as the backend. Never place credentials in Git.
+For a GPU deployment, set `HF_TOKEN` in the environment, obtain the exact approved model revision from the official source, populate a real manifest with verified shard sizes and SHA-256 values, download into a mounted cache with `cortex-ai model download`, verify it, then configure vLLM or SGLang as the backend. Never place credentials in Git.
 
 ## API
 

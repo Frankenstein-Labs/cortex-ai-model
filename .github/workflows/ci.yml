@@ -1,11 +1,15 @@
 name: ci
 on: [push, pull_request]
 jobs:
-  test:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: pip install -e . pytest
-      - run: pytest
+      - run: python -m compileall -q src
+      - run: pytest -q
+      - run: python -m build
+      - name: Ensure no weights or secrets are tracked
+        run: '! git ls-files | grep -E "(\.safetensors|\.bin|\.pt|\.pth|\.ckpt|(^|/)\.env)"'
