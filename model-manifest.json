@@ -1,0 +1,10 @@
+{
+  "model_id": "deepseek-ai/DeepSeek-V4-Pro",
+  "revision": "main",
+  "license": "MIT (model card; verify upstream terms at download time)",
+  "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+  "total_size_bytes": 0,
+  "shards": [
+    {"name": ".weights-placeholder", "size_bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "uri": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"}
+  ]
+}
